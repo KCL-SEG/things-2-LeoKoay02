@@ -7,6 +7,6 @@ class ThingForm(forms.ModelForm):
     class Meta:
         model = Thing
         fields = ['name', 'description', 'quantity']
-        widget = {'description': forms.Textarea(attrs={'maxlength': 120, 'required': True}),
+        widgets = {"description": forms.Textarea(attrs={'maxlength': 120, 'required': True}),
                   'quantity': forms.NumberInput()}
         exclude = ['created_at']
